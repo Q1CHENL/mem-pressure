@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AA288AA2A3D201200EC1FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA288A92A3D201200EC1FBF /* AppDelegate.swift */; };
+		3AA288AC2A3D201200EC1FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA288AB2A3D201200EC1FBF /* ViewController.swift */; };
+		3AA288AE2A3D201400EC1FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA288AD2A3D201400EC1FBF /* Assets.xcassets */; };
+		3AA288B12A3D201400EC1FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA288AF2A3D201400EC1FBF /* Main.storyboard */; };
+		3AA288BC2A3D201500EC1FBF /* MemPressureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA288BB2A3D201500EC1FBF /* MemPressureTests.swift */; };
+		3AA288C62A3D201500EC1FBF /* MemPressureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA288C52A3D201500EC1FBF /* MemPressureUITests.swift */; };
+		3AA288C82A3D201500EC1FBF /* MemPressureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA288C72A3D201500EC1FBF /* MemPressureUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AA288B82A3D201400EC1FBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AA2889E2A3D201100EC1FBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AA288A52A3D201200EC1FBF;
+			remoteInfo = MemPressure;
+		};
+		3AA288C22A3D201500EC1FBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AA2889E2A3D201100EC1FBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AA288A52A3D201200EC1FBF;
+			remoteInfo = MemPressure;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AA288A62A3D201200EC1FBF /* MemPressure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemPressure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA288A92A3D201200EC1FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AA288AB2A3D201200EC1FBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3AA288AD2A3D201400EC1FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AA288B02A3D201400EC1FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AA288B22A3D201400EC1FBF /* MemPressure.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemPressure.entitlements; sourceTree = "<group>"; };
+		3AA288B72A3D201400EC1FBF /* MemPressureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemPressureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA288BB2A3D201500EC1FBF /* MemPressureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemPressureTests.swift; sourceTree = "<group>"; };
+		3AA288C12A3D201500EC1FBF /* MemPressureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemPressureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA288C52A3D201500EC1FBF /* MemPressureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemPressureUITests.swift; sourceTree = "<group>"; };
+		3AA288C72A3D201500EC1FBF /* MemPressureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemPressureUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AA288A32A3D201200EC1FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA288B42A3D201400EC1FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA288BE2A3D201500EC1FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AA2889D2A3D201100EC1FBF = {
+			isa = PBXGroup;
+			children = (
+				3AA288A82A3D201200EC1FBF /* MemPressure */,
+				3AA288BA2A3D201400EC1FBF /* MemPressureTests */,
+				3AA288C42A3D201500EC1FBF /* MemPressureUITests */,
+				3AA288A72A3D201200EC1FBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AA288A72A3D201200EC1FBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AA288A62A3D201200EC1FBF /* MemPressure.app */,
+				3AA288B72A3D201400EC1FBF /* MemPressureTests.xctest */,
+				3AA288C12A3D201500EC1FBF /* MemPressureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AA288A82A3D201200EC1FBF /* MemPressure */ = {
+			isa = PBXGroup;
+			children = (
+				3AA288A92A3D201200EC1FBF /* AppDelegate.swift */,
+				3AA288AB2A3D201200EC1FBF /* ViewController.swift */,
+				3AA288AD2A3D201400EC1FBF /* Assets.xcassets */,
+				3AA288AF2A3D201400EC1FBF /* Main.storyboard */,
+				3AA288B22A3D201400EC1FBF /* MemPressure.entitlements */,
+			);
+			path = MemPressure;
+			sourceTree = "<group>";
+		};
+		3AA288BA2A3D201400EC1FBF /* MemPressureTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AA288BB2A3D201500EC1FBF /* MemPressureTests.swift */,
+			);
+			path = MemPressureTests;
+			sourceTree = "<group>";
+		};
+		3AA288C42A3D201500EC1FBF /* MemPressureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3AA288C52A3D201500EC1FBF /* MemPressureUITests.swift */,
+				3AA288C72A3D201500EC1FBF /* MemPressureUITestsLaunchTests.swift */,
+			);
+			path = MemPressureUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AA288A52A3D201200EC1FBF /* MemPressure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA288CB2A3D201500EC1FBF /* Build configuration list for PBXNativeTarget "MemPressure" */;
+			buildPhases = (
+				3AA288A22A3D201200EC1FBF /* Sources */,
+				3AA288A32A3D201200EC1FBF /* Frameworks */,
+				3AA288A42A3D201200EC1FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemPressure;
+			productName = MemPressure;
+			productReference = 3AA288A62A3D201200EC1FBF /* MemPressure.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AA288B62A3D201400EC1FBF /* MemPressureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA288CE2A3D201500EC1FBF /* Build configuration list for PBXNativeTarget "MemPressureTests" */;
+			buildPhases = (
+				3AA288B32A3D201400EC1FBF /* Sources */,
+				3AA288B42A3D201400EC1FBF /* Frameworks */,
+				3AA288B52A3D201400EC1FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AA288B92A3D201400EC1FBF /* PBXTargetDependency */,
+			);
+			name = MemPressureTests;
+			productName = MemPressureTests;
+			productReference = 3AA288B72A3D201400EC1FBF /* MemPressureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3AA288C02A3D201500EC1FBF /* MemPressureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA288D12A3D201500EC1FBF /* Build configuration list for PBXNativeTarget "MemPressureUITests" */;
+			buildPhases = (
+				3AA288BD2A3D201500EC1FBF /* Sources */,
+				3AA288BE2A3D201500EC1FBF /* Frameworks */,
+				3AA288BF2A3D201500EC1FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AA288C32A3D201500EC1FBF /* PBXTargetDependency */,
+			);
+			name = MemPressureUITests;
+			productName = MemPressureUITests;
+			productReference = 3AA288C12A3D201500EC1FBF /* MemPressureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AA2889E2A3D201100EC1FBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3AA288A52A3D201200EC1FBF = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					3AA288B62A3D201400EC1FBF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 3AA288A52A3D201200EC1FBF;
+					};
+					3AA288C02A3D201500EC1FBF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 3AA288A52A3D201200EC1FBF;
+					};
+				};
+			};
+			buildConfigurationList = 3AA288A12A3D201100EC1FBF /* Build configuration list for PBXProject "MemPressure" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AA2889D2A3D201100EC1FBF;
+			productRefGroup = 3AA288A72A3D201200EC1FBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AA288A52A3D201200EC1FBF /* MemPressure */,
+				3AA288B62A3D201400EC1FBF /* MemPressureTests */,
+				3AA288C02A3D201500EC1FBF /* MemPressureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AA288A42A3D201200EC1FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA288AE2A3D201400EC1FBF /* Assets.xcassets in Resources */,
+				3AA288B12A3D201400EC1FBF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA288B52A3D201400EC1FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA288BF2A3D201500EC1FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AA288A22A3D201200EC1FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA288AC2A3D201200EC1FBF /* ViewController.swift in Sources */,
+				3AA288AA2A3D201200EC1FBF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA288B32A3D201400EC1FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA288BC2A3D201500EC1FBF /* MemPressureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA288BD2A3D201500EC1FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA288C62A3D201500EC1FBF /* MemPressureUITests.swift in Sources */,
+				3AA288C82A3D201500EC1FBF /* MemPressureUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AA288B92A3D201400EC1FBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AA288A52A3D201200EC1FBF /* MemPressure */;
+			targetProxy = 3AA288B82A3D201400EC1FBF /* PBXContainerItemProxy */;
+		};
+		3AA288C32A3D201500EC1FBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AA288A52A3D201200EC1FBF /* MemPressure */;
+			targetProxy = 3AA288C22A3D201500EC1FBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3AA288AF2A3D201400EC1FBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA288B02A3D201400EC1FBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AA288C92A3D201500EC1FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AA288CA2A3D201500EC1FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3AA288CC2A3D201500EC1FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MemPressure/MemPressure.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKLQ88SKQ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qichen.MemPressure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3AA288CD2A3D201500EC1FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MemPressure/MemPressure.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKLQ88SKQ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qichen.MemPressure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3AA288CF2A3D201500EC1FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKLQ88SKQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qichen.MemPressureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemPressure.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MemPressure";
+			};
+			name = Debug;
+		};
+		3AA288D02A3D201500EC1FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKLQ88SKQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qichen.MemPressureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemPressure.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MemPressure";
+			};
+			name = Release;
+		};
+		3AA288D22A3D201500EC1FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKLQ88SKQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qichen.MemPressureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MemPressure;
+			};
+			name = Debug;
+		};
+		3AA288D32A3D201500EC1FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKLQ88SKQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qichen.MemPressureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MemPressure;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AA288A12A3D201100EC1FBF /* Build configuration list for PBXProject "MemPressure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA288C92A3D201500EC1FBF /* Debug */,
+				3AA288CA2A3D201500EC1FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA288CB2A3D201500EC1FBF /* Build configuration list for PBXNativeTarget "MemPressure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA288CC2A3D201500EC1FBF /* Debug */,
+				3AA288CD2A3D201500EC1FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA288CE2A3D201500EC1FBF /* Build configuration list for PBXNativeTarget "MemPressureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA288CF2A3D201500EC1FBF /* Debug */,
+				3AA288D02A3D201500EC1FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA288D12A3D201500EC1FBF /* Build configuration list for PBXNativeTarget "MemPressureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA288D22A3D201500EC1FBF /* Debug */,
+				3AA288D32A3D201500EC1FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AA2889E2A3D201100EC1FBF /* Project object */;
+}
