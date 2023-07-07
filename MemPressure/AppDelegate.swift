@@ -19,10 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // prevent the app from showing in dock
         NSApp.setActivationPolicy(.accessory)
         
-        // close main window at start
-        //        if let window = NSApplication.shared.windows.first {
-        //            window.close()
-        //        }
         
         // Create a status bar item with a custom view
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -59,13 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         mainWindow.setIsVisible(false)
     }
     
-    //    @objc func statusBarButtonClicked(_ sender: NSStatusBarButton) {
-    //        // Call the function to get the desired result
-    //        let newTitle = getUpdatedTitle()
-    //
-    //        // Update the title of the status bar button
-    //        sender.title = newTitle
-    //    }
+
     @objc func statusBarButtonClicked(_ sender: NSStatusBarButton) {
         // Implement any desired actions when the status bar button is clicked
     }
@@ -100,7 +90,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Set the font attributes for the attributed title
         let fontAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: NSColor(calibratedRed: 0.0, green: 0.5, blue: 0.0, alpha: 1.0),
+            .foregroundColor: NSColor(calibratedRed: 0.0, green: 0.67, blue: 0.0, alpha: 1.0),
             .font: NSFont.systemFont(ofSize: fontSize)
         ]
         
