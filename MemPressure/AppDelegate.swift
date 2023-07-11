@@ -90,8 +90,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Set the font attributes for the attributed title
         let fontAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: NSColor(calibratedRed: 0.0, green: 0.67, blue: 0.0, alpha: 1.0),
-            .font: NSFont.systemFont(ofSize: fontSize)
+            .foregroundColor: NSColor(calibratedRed: 0.0, green: 1, blue: 0.0, alpha: 1.0),
+            .font: NSFont.boldSystemFont(ofSize: fontSize)
         ]
         
         if let button = statusItem.button {
