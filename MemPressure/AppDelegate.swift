@@ -15,6 +15,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var updateTimer: Timer?
     var mainWindow: NSWindow!
     
+    // Define instance variables for plainItem and colorizedItem
+    var plainItem: NSMenuItem!
+    var colorizedItem: NSMenuItem!
+    
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // prevent the app from showing in dock
         NSApp.setActivationPolicy(.accessory)
@@ -35,6 +40,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Add a menu to the status bar item
         let menu = NSMenu()
+        
+        let appearanceMenuItem = NSMenuItem(title: "Appearance", action: #selector(appearanceMenuItemClicked(_:)), keyEquivalent: "")
+        menu.addItem(appearanceMenuItem)
+        
+        let submenu = NSMenu()
+
+        plainItem = NSMenuItem(title: "Plain", action: #selector(plainItemClicked(_:)), keyEquivalent: "")
+        submenu.addItem(plainItem)
+
+        colorizedItem = NSMenuItem(title: "Colorized", action: #selector(colorizedItemClicked(_:)), keyEquivalent: "")
+        submenu.addItem(colorizedItem)
+
+        // Set the submenu for the appearanceMenuItem
+        appearanceMenuItem.submenu = submenu
         
         // Add an "Open Activity Monitor" menu item
         let openActivityMonitorMenuItem = NSMenuItem(title: "Open Activity Monitor", action: #selector(openActivityMonitorMenuItemClicked(_:)), keyEquivalent: "")
@@ -63,6 +82,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func quitMenuItemClicked(_ sender: NSMenuItem) {
         NSApplication.shared.terminate(self)
     }
+    
+    @objc func appearanceMenuItemClicked(_ sender: NSMenuItem) {
+      
+    }
+
+    @objc func plainItemClicked(_ sender: NSMenuItem) {
+        plainItem.state = .on
+        colorizedItem.state = .off
+    }
+    
+    @objc func colorizedItemClicked(_ sender: NSMenuItem) {
+        plainItem.state = .off
+        colorizedItem.state = .on
+    }
+
 
     @objc func openActivityMonitorMenuItemClicked(_ sender: NSMenuItem) {
         let url = NSURL(fileURLWithPath: "/System/Applications/Utilities/Activity Monitor.app", isDirectory: true) as URL
@@ -90,9 +124,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Set the font attributes for the attributed title
         let fontAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: NSColor(calibratedRed: 0.0, green: 1, blue: 0.0, alpha: 1.0),
+//            .foregroundColor: NSColor(calibratedRed: 0.0, green: 1, blue: 0, alpha: 1.0),
             .font: NSFont.boldSystemFont(ofSize: fontSize)
         ]
+        
         
         if let button = statusItem.button {
             button.title = title
