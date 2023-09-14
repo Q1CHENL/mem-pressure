@@ -15,24 +15,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var updateTimer: Timer?
     var mainWindow: NSWindow!
     
-    // Define instance variables for plainItem and colorizedItem
+    // items of submenus
     var plainItem: NSMenuItem!
     var colorizedItem: NSMenuItem!
-    
+    var oneSecItem: NSMenuItem!
+    var threeSecItem: NSMenuItem!
+    var fiveSecItem: NSMenuItem!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // prevent the app from showing in dock
         NSApp.setActivationPolicy(.accessory)
         
-        
         // Create a status bar item with a custom view
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        //         statusItem.button?.action = #selector(statusBarButtonClicked(_:))
-        //
         
         // Create a button and set its appearance and action
         if let button = statusItem.button {
-            //            button.title = getUpdatedTitle()
             updateButtonTitle()
             button.target = self
             button.action = #selector(statusBarButtonClicked(_:))
@@ -41,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Add a menu to the status bar item
         let menu = NSMenu()
         
+        // Appearance
         let appearanceMenuItem = NSMenuItem(title: "Appearance", action: #selector(appearanceMenuItemClicked(_:)), keyEquivalent: "")
         menu.addItem(appearanceMenuItem)
         
@@ -55,6 +54,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Set the submenu for the appearanceMenuItem
         appearanceMenuItem.submenu = submenu
         
+        // Add an Update Interval menu item
+        let updateInterval = NSMenuItem(title: "Update Interval", action: #selector(updateIntervalItemClicked(_:)), keyEquivalent: "")
+        menu.addItem(updateInterval)
+        let submenuUpdateInterval = NSMenu()
+        updateInterval.submenu = submenuUpdateInterval
+        
+        oneSecItem = NSMenuItem(title: "1s", action: #selector(oneSecItemClicked(_:)), keyEquivalent: "")
+        threeSecItem = NSMenuItem(title: "3s", action: #selector(threeSecItemClicked(_:)), keyEquivalent: "")
+        fiveSecItem = NSMenuItem(title: "5s", action: #selector(fiveSecItemClicked(_:)), keyEquivalent: "")
+        threeSecItem.state  = .on
+        
+        submenuUpdateInterval.addItem(oneSecItem)
+        submenuUpdateInterval.addItem(threeSecItem)
+        submenuUpdateInterval.addItem(fiveSecItem)
+        
         // Add an "Open Activity Monitor" menu item
         let openActivityMonitorMenuItem = NSMenuItem(title: "Open Activity Monitor", action: #selector(openActivityMonitorMenuItemClicked(_:)), keyEquivalent: "")
         menu.addItem(openActivityMonitorMenuItem)
@@ -63,11 +77,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let quitMenuItem = NSMenuItem(title: "Quit MemPressure", action: #selector(quitMenuItemClicked(_:)), keyEquivalent: "")
         menu.addItem(quitMenuItem)
         
-        
         // Set the menu for the status bar item
         statusItem.menu = menu
         
+        // timer for update interval
         updateTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(updateButtonTitle), userInfo: nil, repeats: true)
+        
         mainWindow = NSApplication.shared.windows.first
         mainWindow.isReleasedWhenClosed = false
         mainWindow.contentView = NSView(frame: NSRect.zero)
@@ -79,12 +94,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Implement any desired actions when the status bar button is clicked
     }
     
+    
+    @objc func updateIntervalItemClicked(_ sender: NSStatusBarButton) {
+        // Implement any desired actions when the status bar button is clicked
+    }
+    
     @objc func quitMenuItemClicked(_ sender: NSMenuItem) {
         NSApplication.shared.terminate(self)
     }
     
     @objc func appearanceMenuItemClicked(_ sender: NSMenuItem) {
       
+    }
+    
+    @objc func oneSecItemClicked(_ sender: NSMenuItem){
+        oneSecItem.state = .on
+        updateTimer?.invalidate()
+        updateTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateButtonTitle), userInfo: nil, repeats: true)
+    }
+    
+    @objc func threeSecItemClicked(_ sender: NSMenuItem){
+        threeSecItem.state = .on
+        updateTimer?.invalidate()
+        updateTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(updateButtonTitle), userInfo: nil, repeats: true)
+    }
+    
+    @objc func fiveSecItemClicked(_ sender: NSMenuItem){
+        fiveSecItem.state = .on
+        updateTimer?.invalidate()
+        updateTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateButtonTitle), userInfo: nil, repeats: true)
     }
 
     @objc func plainItemClicked(_ sender: NSMenuItem) {
@@ -122,31 +160,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let fontSize: CGFloat = 12.0  // Adjust the font size as desired
         
-        // Set the font attributes for the attributed title
-        let fontAttributes: [NSAttributedString.Key: Any] = [
-//            .foregroundColor: NSColor(calibratedRed: 0.0, green: 1, blue: 0, alpha: 1.0),
-            .font: NSFont.boldSystemFont(ofSize: fontSize)
-        ]
-        
-        
         if let button = statusItem.button {
             button.title = title
             let numericTitle = title.dropFirst().dropLast()
             if let pressure = Int(numericTitle) {
                 if pressure < 65 {
-                    button.attributedTitle = NSAttributedString(string: title, attributes: fontAttributes)
+                    button.attributedTitle = NSAttributedString(string: title, attributes: [.font: NSFont.boldSystemFont(ofSize: fontSize)])
                 } else if pressure >= 65 && pressure <= 90 {
-                    button.attributedTitle = NSAttributedString(string: title, attributes: [.foregroundColor: NSColor.orange])
+                    button.attributedTitle = NSAttributedString(string: title, attributes: [.foregroundColor: NSColor.orange, .font: NSFont.boldSystemFont(ofSize: fontSize)])
                 } else {
-                    button.attributedTitle = NSAttributedString(string: title, attributes: [.foregroundColor: NSColor.red])
+                    button.attributedTitle = NSAttributedString(string: title, attributes: [.foregroundColor: NSColor.red, .font: NSFont.boldSystemFont(ofSize: fontSize)])
                 }
             } else {
                 // Handle the case when the title does not contain a valid numeric value
-                button.attributedTitle = NSAttributedString(string: title, attributes: [.foregroundColor: NSColor.black])
+                button.attributedTitle = NSAttributedString(string: title, attributes: [.foregroundColor: NSColor.black, .font: NSFont.boldSystemFont(ofSize: fontSize)])
             }
         }
     }
     
+    // Get string "MXX%"
     func getUpdatedTitle() -> String {
         let task = Process()
         let pipe = Pipe()
@@ -171,7 +203,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             
         }
-        
         return ""
     }
     
